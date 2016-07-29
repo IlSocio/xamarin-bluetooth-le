@@ -51,6 +51,7 @@ namespace Plugin.BLE.Abstractions
 
             IsScanning = true;
             serviceUuids = serviceUuids ?? new Guid[0];
+            _discoveredDevices.Clear();
             _currentScanDeviceFilter = deviceFilter ?? (d => true);
             _scanCancellationTokenSource = new CancellationTokenSource();
 
